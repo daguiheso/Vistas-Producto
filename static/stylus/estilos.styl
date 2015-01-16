@@ -1,0 +1,89 @@
+@import "nib"
+@import "normalize.styl"
+@import "fonts.styl"
+
+gris_claro = #818181
+
+
+input
+	border-radius: 4px
+	
+
+//oocss clases
+
+.left
+	float left
+.right
+	float right
+.relative
+	position relative
+
+	
+
+.mainMenu
+	background #002832
+	bottom 0
+	top 0
+	width 180px
+	position fixed
+	
+.header
+	display block
+	&-content
+		padding 0px 20px
+		height 40px
+		background white
+		border-bottom 1px solid gris_claro
+		margin-left 180px
+		
+	.logo
+		position relative
+	.indigoIcon
+		color: #4093a7
+		position absolute
+		top .2em
+		font-size: 1.8em
+	.imag
+		margin 0
+		position absolute
+		left 2.2em
+		top .44em
+		// display inline-block
+		// line-height: 3.4em;
+	.avatar
+		height 33px
+		width 33px
+		margin 0
+	.round
+		border-radius 50%
+		overflow hidden
+	.username
+		color #818181;
+		margin-left .5em
+		margin-top .7em		
+		&:after
+			border-left 7px solid transparent
+			border-right 7px solid transparent			
+			border-top 9px solid gris_claro
+			content ""
+			display inline-block
+			margin-left .4em
+	.search-icon
+		position absolute
+		left .5em
+		top .3em
+		color gris_claro
+	.input
+		border 1px solid gris_claro
+		height 1.5em
+		border-radius 5px
+		padding 0 1em 0 2em
+		
+
+		
+.board
+	margin-left 180px
+	// background green
+	padding 15px
+	// &-content
+		
