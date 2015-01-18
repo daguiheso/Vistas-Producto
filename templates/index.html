@@ -30,17 +30,36 @@
 			</div>											
 		</div>		
 	</header>
-	<section class="mainMenu">
-		
+	<section class="mainMenu"></section>
+	<section class="board">		
+		<div class="caja">PRODUCTOS</div>
+		<div class="action">
+			<a href="#modal1" class="button" id="mostrar-form">Nuevo Producto</a>
+			<a href="#" class="button">Consultar Producto</a>
+			<a href="#" class="button">Modificar Producto</a>
+		</div>		
+		<div id="contenido">
+			<div class="item">
+				<p class="titulo_item item-feature">Lija Negra</p>	
+				<p class="marca_item item-feature">Industysed</p>						
+			</div>
+		</div>
 	</section>
-	<section class="board">
-		<!-- <div class="board-content">
-			<h2>Products</h2>
-			
-			<form>
-				<input></input>
-			</form>
-		</div> -->
+	<section class="window">
+		<!-- ventana-modal -->
+		<div id="modal1" class="modalmask">
+		    <div class="modalbox movedown">
+		        <a href="#close" class="close" id="ocultar-form">X</a>
+		        <h2>Nuevo Producto</h2>		        
+		        <form id="formulario" class="formulario" >
+		        	<input type="text" id="titulo" placeholder="Titulo" required>
+        			<input type="text" id="marca"placeholder="Marca"  required>
+        			<input type="submit" value="Agregar">
+		        </form>
+		    </div>
+		</div>
 	</section>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="../static/js/formulario.js"></script>
 </body>
 </html>

@@ -2,103 +2,199 @@
 @import "normalize.styl"
 @import "fonts.styl"
 
+
 gris_claro = #818181
 azul_claro = #6ccce3
+azul_oscuro = #3f93a7
 
 
 input
-	border-radius: 4px
-	
+  border-radius: 4px  
+
+  
+#modal1
+  display none
+#contenido
+  margin 1em
+  
 
 //oocss clases
 
 .left
-	float left
+  float left
 .right
-	float right
+  float right
 .relative
-	position relative
-	
+  position relative
 
 
-.mainMenu
-	background #002832
-	bottom 0
-	top 0
-	width 180px
-	position fixed
-	
+//header  
 .header
-	display block	
-	.contenedor
-		padding 0px 20px
-		height 45px
-		background white
-		box-shadow: rgba(0,0,0,0.3) 0px 2px 2px;
-		margin-left 180px
-		font-size 20px
-		position relative	
-		.indigoIcon
-			color: #4093a7
-			position absolute
-			top .1em
-			font-size: 1.8em
-		.imag
-			margin 0
-			position absolute
-			left 3em
-			top .47em
-	&-session
-		.avatar
-			border 2px solid azul_claro
-			height 30px
-			width 30px
-			margin .27em 0
-		.round
-			border-radius 50%
-			overflow hidden
-		.username
-			color azul_claro
-			margin-left .5em
-			margin-top 1em	
-			font-size .7em
-			&:after
-				border-left 5px solid transparent
-				border-right 5px solid transparent			
-				border-top 7px solid azul_claro
-				content ""
-				display inline-block
-				margin-left .4em
-				font-size .7em
-	&-alerts
-		padding .6em
-		color azul_claro
-		.email-icon
-			margin-right .5em
-	&-search
-		line-height 2.4em
-		.search-icon
-			position absolute
-			right .6em
-			top .94em
-			color azul_claro
-			font-size 1em
-			font-size .8em
-		.input
-			border 1px solid azul_claro
-			height 1em
-			border-radius 20px
-			padding 0 1em 0 2em
-			width 9em		
+  display block 
+  .contenedor
+    padding 0px 20px
+    height 45px
+    background white
+    box-shadow: rgba(0,0,0,0.3) 0px 2px 2px;
+    margin-left 180px
+    font-size 20px
+    position relative 
+    .indigoIcon
+      color: #4093a7
+      position absolute
+      top .1em
+      font-size: 1.8em
+    .imag
+      margin 0
+      position absolute
+      left 3em
+      top .47em
+  &-session
+    .avatar
+      border 2px solid azul_claro
+      height 30px
+      width 30px
+      margin .27em 0
+    .round
+      border-radius 50%
+      overflow hidden
+    .username
+      color azul_claro
+      margin-left .5em
+      margin-top 1em  
+      font-size .7em
+      &:after
+        border-left 5px solid transparent
+        border-right 5px solid transparent      
+        border-top 7px solid azul_claro
+        content ""
+        display inline-block
+        margin-left .4em
+        font-size .7em
+  &-alerts
+    padding .6em
+    color azul_claro
+    .email-icon
+      margin-right .5em
+  &-search
+    line-height 2.4em
+    .search-icon
+      position absolute
+      right .6em
+      top .94em
+      color azul_claro
+      font-size 1em
+      font-size .8em
+    .input
+      border 1px solid azul_claro
+      height 1em
+      border-radius 20px
+      padding 0 1em 0 2em
+      width 9em   
 
-		
+//mainmenu
+.mainMenu
+  background #002832
+  bottom 0
+  top 0
+  width 180px
+  position fixed
+    
+
 .board
-	margin-left 180px
-	// background green
-	padding 15px
-	// &-content
-	
+  margin-left 180px
+  padding 50px
+  
+  .caja
+    background azul_claro
+    display inline-block
+    padding .5em
+    border-radius 2px
+    color white
+  .action
+    padding 1em 0
+    text-align center
+    height auto
+    line-height 8em
+    .button
+      background azul_claro
+      border-radius 6px
+      padding 1.5em
+      border none
+      margin-right: .5em
+      color white
+      text-decoration none  
+
+  .item
+    background white
+    border-bottom 2px solid #22BCE0
+    position relative
+    min-height 12px
+    margin-top 1em 0
+    &-feature
+      display inline-block
+      margin 0 1em
+    
+
+  .titulo_item
+    font-size 1.1em
+    color azul_oscuro
+
+.window
+  background red
+  .modalmask
+    position fixed
+    font-family Arial, sans-serif
+    top 0
+    right 0
+    bottom 0
+    left 0
+    background rgba(0,0,0,0.2)
+    z-index 99999
+    opacity 1
+    pointer-events auto  
+
+  .modalbox
+    width 400px
+    position relative
+    padding 5px 20px 13px 20px
+    background #fff
+    border-radius 3px
+
+  .movedown
+    margin 10% auto  
+
+  .close
+    background #606061
+    color #FFFFFF
+    line-height 25px
+    position absolute
+    right 1px
+    text-align center
+    top 1px
+    width 24px
+    text-decoration none
+    font-weight bold
+    border-radius 3px
+    &:hover
+      background #FAAC58
+      color #222
 
 
-		
-
+//formulario
+.formulario
+  padding .6em
+  input
+    border: 1px solid #ccc
+    border-radius: 5px
+    padding: 0.2em 0.6em
+    margin: .1em
+  input[type="submit"]
+    background: #22BCE0
+    border-color: #22BCE0
+    font-style: italic
+    text-shadow: rgba(0,0,0,0.5) 2px 2px 5px
+    box-shadow: rgba(0,0,0,0.5) 5px 5px 20px
+    color: white
+    position: relative
+    left 3em
